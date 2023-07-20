@@ -1,14 +1,18 @@
+
 import random
 
 def last_digit_info(number):
     last_digit = abs(number) % 10
 
+    print("Last digit of", number, "is", last_digit, end=" ")
+
     if last_digit > 5:
-        return "Last digit of {} is {} and is greater than 5".format(number, last_digit)
+        print("and is greater than 5")
     elif last_digit == 0:
-        return "Last digit of {} is {} and is 0".format(number, last_digit)
+        print("and is 0")
     else:
-        return "Last digit of {} is {} and is less than 6 and not 0".format(number, last_digit)
+        print("and is less than 6 and not 0")
 
 number = random.randint(-10000, 10000)
-print(last_digit_info(number))
+last_digit_info(number)
+
