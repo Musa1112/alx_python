@@ -9,4 +9,4 @@ def safe_print_division(a, b):
 
 # Test the function
 result = safe_print_division(10, 2)
-result = safe_print_division(5, 0)
+
