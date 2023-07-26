@@ -1,12 +1,13 @@
 def safe_print_division(a, b):
-  """Safely prints the division of a and b."""
-  try:
-    result = a / b
-    print("Inside result: {}".format(result))
-    return result
-  except ZeroDivisionError:
-    return None
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        result = None
+    finally:
+        print("Inside result: {}".format(result))
+        return result
 
-if __name__ == "__main__":
-  result = safe_print_division(10, 2)
-  print(result)
+# Test the function with a = 12 and b = 0
+a = 12
+b = 0
+result = safe_print_division(a, b)
