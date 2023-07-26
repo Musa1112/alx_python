@@ -1,4 +1,3 @@
-
 # main.py
 a = 1
 b = 2
@@ -10,4 +9,4 @@ from add_0 import add
 result = add(a, b)
 
 # Print the formatted output
-print(f"{a} + {b} = {result}")
+print(str(a) + " + " + str(b) + " = " + str(result))
