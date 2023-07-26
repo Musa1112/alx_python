@@ -2,9 +2,9 @@ def safe_print_division(x, y):
   """Safely prints the division of x and y."""
   try:
     result = x / y
-    print(f"{x} / {y} = {result}")
+    print("{} / {} = {}".format(x, y, result))
   except ZeroDivisionError:
-    print(f"Cannot divide {x} by 0")
+    print("Cannot divide {} by 0".format(x))
   finally:
     print("This code is always executed.")
 
