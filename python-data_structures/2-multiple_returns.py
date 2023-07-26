@@ -1,10 +1,10 @@
 def multiple_returns(sentence):
-    length = len(sentence)
-    first_char = sentence[0] if length > 0 else None
-    return length, first_char
+  """Returns a tuple with the length of a string and its first character."""
+  if sentence == "":
+    return (0, None)
+  else:
+    return (len(sentence), sentence[0])
 
-result1 = multiple_returns("Hello")
-print(result1)  # Output: (5, 'H')
-
-result2 = multiple_returns("")
-print(result2)  # Output: (0, None)
+if __name__ == "__main__":
+  result = multiple_returns("Hello, world! this is python data set")
+  print(result)
