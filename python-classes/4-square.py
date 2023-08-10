@@ -34,3 +34,7 @@ class Square:
                     print("#", end="")
                 print("")
 
+# Documentation for the Square class
+
+    """This class defines a square with a private size attribute. The size attribute cannot be changed directly, but it can be accessed through the size property. The area method calculates and returns the area of the square."""
+
