@@ -1,6 +1,6 @@
 def main():
   for i in range(100):
-    print(f"{i:02d} {i:02x}")
+    print("{:02d} {:02x}".format(i, i))
 
 if __name__ == "__main__":
   main()
