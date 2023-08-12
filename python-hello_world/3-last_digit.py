@@ -1,9 +1,8 @@
-def last_digit(number):
-  if number < 0:
-    number = number * -1
+def first_last_digit(number):
+  first_digit = number // 10 ** len(number)
   last_digit = number % 10
-  return last_digit
+  return first_digit, last_digit
 
 if __name__ == "__main__":
-  print(last_digit(98742))
-  print(last_digit(-1234))
+  print(first_last_digit(98742))
+  print(first_last_digit(-1234))
