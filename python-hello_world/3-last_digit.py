@@ -1,6 +1,7 @@
 import random
 
 def last_digit(number):
+  number = random.randint(-10000, 10000)
   last_digit = number % 10
   if last_digit > 5:
     return f"Last digit of {number} is {last_digit} and is greater than 5"
@@ -9,5 +10,6 @@ def last_digit(number):
   else:
     return f"Last digit of {number} is {last_digit} and is less than 6 and not 0"
 
-number = random.randint(-10000, 10000)
-print(last_digit(number))
+if __name__ == "__main__":
+  number = random.randint(-10000, 10000)
+  print(last_digit(number))
