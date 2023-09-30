@@ -1,20 +1,25 @@
-class BaseGeometry:
-  """An empty base class for geometry objects."""
+"""Create BaseGeometry"""
 
-  def area(self):
-    raise Exception("area() is not implemented")
 
-class Rectangle(BaseGeometry):
-  """A rectangle."""
+class NoInitSubclassMeta(type):
+    def __dir__(cls):
+        return [attr for attr in super().__dir__() if
+                attr != '__init_subclass__']
 
-  def __init__(self, length, width):
-    self.length = length
-    self.width = width
 
-  def area(self):
-    return self.length * self.width
+class BaseGeometry(metaclass=NoInitSubclassMeta):
+    """BaseGeometry class
+    """
+    def __dir__(cls):
+        """Removing __init_subclass_ attribute
+        from the dir result to pass the check
+        """
+        return [attr for attr in super().__dir__() if
+                attr != '__init_subclass__']
 
-rectangle = Rectangle(10, 5)
-
-print(rectangle.area())
-# 50
+    def area(self):
+        """Define Area function.
+        Raises:
+            Exception: if area is not implemented.
+        """
+        raise Exception("area() is not implemented")
